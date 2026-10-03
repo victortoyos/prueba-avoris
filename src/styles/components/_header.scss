@@ -1,0 +1,38 @@
+.header {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.c-nav {
+  &__link {
+    @apply px-3 flex items-center gap-1.5;
+
+    span {
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+ &__icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    &--aventura {
+      mask-image: url('/src/assets/aventura.svg');
+    }
+
+    &--destinos {
+      mask-image: url('/src/assets/destinos.svg');
+    }
+
+    &--alojamiento {
+      mask-image: url('/src/assets/alojamiento.svg');
+    }
+  }
+}

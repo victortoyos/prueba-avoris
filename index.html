@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prueba-avoris-victor-toyos</title>
+  </head>
+  <body>
+    <header class="header px-4 tablet:px-6 desktop:px-8 py-4 tablet:py-6 grid tablet:grid-cols-[1fr_auto_1fr] items-center">
+      <img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless logo - ir a inicio" />
+      <nav class="hidden tablet:block">
+        <ul class="flex flex-row items-center justify-between gap-x-4 desktop:gap-x-16">
+          <li>
+            <a href="#" class="c-nav__link">
+              <span class="c-nav__icon c-nav__icon--aventura" aria-hidden="true"></span><span>Aventura</span></a>
+          </li>
+          <li>
+            <a href="#" class="c-nav__link">
+              <span class="c-nav__icon c-nav__icon--destinos" aria-hidden="true"></span><span>Destino</span></a>
+          </li>
+          <li>
+            <a href="#" class="c-nav__link">
+              <span class="c-nav__icon c-nav__icon--alojamiento" aria-hidden="true"></span><span>Alojamiento</span></a>
+          </li>
+          <li>
+            <a href="#" class="c-nav__link">
+              <span>Sobre nosotros</span></a>
+          </li>
+        </ul>
+      </nav>
+      <a class="ml-auto hidden tablet:block" href="#">Reserva</a>
+      <button
+        class="header__menu-toggle tablet:hidden"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu">
+        <img class="h-6 w-auto desktop:h-8" src="/src/assets/burgerMenu.svg" alt="Menú" />
+      </button>
+    </header>
+    <main class="p-8"></main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
