@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>prueba-avoris-victor-toyos</title>
   </head>
+
   <body>
-    <header class="header px-4 tablet:px-6 desktop:px-8 py-4 tablet:py-6 grid tablet:grid-cols-[1fr_auto_1fr] items-center">
-      <img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless logo - ir a inicio" />
+    <header
+      class="header px-4 tablet:px-6 desktop:px-8 py-4 tablet:py-6 grid tablet:grid-cols-[1fr_auto_1fr] items-center">
+      <a href="#" aria-label="Waveless, ir a inicio"
+        ><img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless"
+      /></a>
       <nav class="hidden tablet:block">
         <ul class="flex flex-row items-center justify-between gap-x-4 desktop:gap-x-16">
           <li>
-            <a href="#" class="c-nav__link">
-              <span class="c-nav__icon c-nav__icon--aventura" aria-hidden="true"></span><span>Aventura</span></a>
+            <a href="#" class="nav__link">
+              <span class="nav__icon nav__icon--aventura" aria-hidden="true"></span><span>Aventura</span></a
+            >
           </li>
           <li>
-            <a href="#" class="c-nav__link">
-              <span class="c-nav__icon c-nav__icon--destinos" aria-hidden="true"></span><span>Destino</span></a>
+            <a href="#" class="nav__link">
+              <span class="nav__icon nav__icon--destinos" aria-hidden="true"></span><span>Destinos</span></a
+            >
           </li>
           <li>
-            <a href="#" class="c-nav__link">
-              <span class="c-nav__icon c-nav__icon--alojamiento" aria-hidden="true"></span><span>Alojamiento</span></a>
+            <a href="#" class="nav__link">
+              <span class="nav__icon nav__icon--alojamiento" aria-hidden="true"></span><span>Alojamiento</span></a
+            >
           </li>
           <li>
-            <a href="#" class="c-nav__link">
-              <span>Sobre nosotros</span></a>
+            <a href="#" class="nav__link"> <span>Sobre nosotros</span></a>
           </li>
         </ul>
       </nav>
-      <button class="button header__cta ml-auto hidden tablet:inline-flex" href="#">Reserva</button>
+      <button class="button header__cta ml-auto hidden tablet:inline-flex">Reserva</button>
       <button
         class="header__menu-toggle tablet:hidden"
         aria-label="Abrir menú"
@@ -38,7 +44,264 @@
         <img class="h-6 w-auto desktop:h-8" src="/src/assets/burgerMenu.svg" alt="Menú" />
       </button>
     </header>
-    <main class="p-8"></main>
+    <main>
+      <section class="intro wrapper py-14 desktop:py-[4.5rem]" aria-labelledby="intro-title">
+        <h1 id="intro-title" class="intro__title">Vive tus propias aventuras</h1>
+        <p class="intro__subtitle">Para los que les gusta explorar y conocer mundo sin complejos</p>
+      </section>
+      <button type="button" class="button button--small button--show-filters desktop:hidden" data-filters-open>
+        <span class="button__icon" aria-hidden="true"></span>
+        Ver filtros
+      </button>
+      <div
+        class="destinations wrapper desktop:grid desktop:grid-cols-[16.5rem_1fr] desktop:gap-6 pb-14 desktop:pb-[4.5rem]">
+        <dialog class="filters destinations__filters" aria-labelledby="filters-title">
+          <div class="filters__header">
+            <h2 id="filters-title" class="filters__title">Filtrar mi búsqueda</h2>
+            <button type="button" class="filters__close desktop:hidden" aria-label="Cerrar filtros" data-filters-close>
+              <span class="filters__close-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="filters__wrapper">
+            <details class="filters__group">
+              <summary class="filters__summary">
+                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-name">Destinos</span>
+                <span class="filters__chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="filters__content">…</div>
+            </details>
+
+            <details class="filters__group" open>
+              <summary class="filters__summary">
+                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-name">Aventura</span>
+                <span class="filters__chevron" aria-hidden="true"></span>
+              </summary>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Tipo de aventura</legend>
+                <ul class="filters__list" role="list">
+                  <li class="filters__item">
+                    <input type="checkbox" id="adv-quads" class="filters__checkbox" />
+                    <label for="adv-quads" class="filters__label">Quads</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Quads"
+                        aria-describedby="tip-quads">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-quads" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                </ul>
+                <button type="button" class="filters__more">Ver 21 más</button>
+              </fieldset>
+            </details>
+
+            <details class="filters__group">
+              <summary class="filters__summary">…Alojamiento…</summary>
+              <div class="filters__content">…</div>
+            </details>
+
+            <details class="filters__group" open>
+              <summary class="filters__summary">
+                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-name">Precio</span>
+                <span class="filters__chevron" aria-hidden="true"></span>
+              </summary>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Rango de precio</legend>
+                <label class="sr-only" for="price-min">Precio mínimo</label>
+                <input type="number" id="price-min" class="filters__input" placeholder="Mínimo" min="0" />
+                <label class="sr-only" for="price-max">Precio máximo</label>
+                <input type="number" id="price-max" class="filters__input" placeholder="Máximo" min="0" />
+              </fieldset>
+            </details>
+          </div>
+        </dialog>
+
+        <div class="destinations__results">
+          <section class="region" aria-labelledby="asia-title">
+            <h2 id="asia-title" class="region__title">Asia</h2>
+            <ul class="region__list" role="list">
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes1.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes2.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes3.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes1.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes2.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

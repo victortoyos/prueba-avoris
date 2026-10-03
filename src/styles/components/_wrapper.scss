@@ -1,0 +1,40 @@
+@use "../base/breakpoints" as bp;
+
+.wrapper {
+  --margin-wrapper: 15px;
+
+  width: min(1128px, 100% - 2 * var(--margin-wrapper));
+  margin-inline: auto;
+
+  @include bp.up(tablet) {
+    --margin-wrapper: 71px;
+  }
+
+  @include bp.up(desktop) {
+    --margin-wrapper: 48px;
+  }
+}
+
+.destinations {
+  --region-title-line: 1.5rem;
+  --region-title-gap: 1rem;
+
+  @include bp.up(desktop) {
+    align-items: start;
+  }
+}
+
+.region {
+  &__title {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: var(--region-title-line);
+    margin-bottom: var(--region-title-gap);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr));
+    gap: 1.5rem;
+  }
+}

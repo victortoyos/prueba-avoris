@@ -1,0 +1,145 @@
+@use "../base/breakpoints" as bp;
+
+.card {
+  --card-radius: 1.5rem;
+
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__media {
+    position: relative;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 264 / 188;
+    object-fit: cover;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__destination {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  &__location {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__duration {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+  }
+
+  &__from {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  &__amount {
+    display: block;
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "breakdown price"
+      "cta cta";
+    align-items: end;
+    gap: 1rem 0.5rem;
+    margin-top: auto;
+    padding: 1rem;
+    background-color: var(--color-surface);
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+
+    @include bp.up(tablet) {
+      grid-template-areas:
+        "price cta"
+        "breakdown cta";
+      row-gap: 0;
+    }
+  }
+
+  &__price {
+    grid-area: price;
+    text-align: right;
+
+    @include bp.up(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__breakdown {
+    display: flex;
+    align-items: center;
+    gap: 0.225rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    grid-area: breakdown;
+    justify-self: start;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-secondary);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url("/src/assets/chevronDown.svg");
+  }
+
+  &__breakdown-text {
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+
+  &__cta {
+    grid-area: cta;
+
+    @include bp.up(tablet) {
+      align-self: center;
+    }
+  }
+}

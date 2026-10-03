@@ -1,7 +1,14 @@
 @use './base/typography';
 @use './base/variables';
+@use './base/breakpoints';
+@use './base/mixins';
 @use './components/header';
+@use './components/intro';
 @use './components/buttons';
+@use './components/wrapper';
+@use './components/card';
+@use './components/badge';
+@use './components/filters';
 
 @tailwind base;
 @tailwind components;

@@ -1,0 +1,7 @@
+@mixin mask-icon($url, $size: 1.5rem) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  background-color: currentColor;
+  mask: url($url) center / contain no-repeat;
+}
