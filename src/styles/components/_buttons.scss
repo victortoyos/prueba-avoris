@@ -48,3 +48,26 @@
     outline-offset: 2px;
   }
 }
+
+.link-button {
+  display: flex;
+    align-items: center;
+    gap: 0.225rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    justify-self: start;
+    transition: color var(--transition-fast);
+    
+    &:hover {
+      color: var(--color-secondary);
+    } &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+    
+    &__text {
+      text-decoration: underline;
+      text-underline-offset: 1px;
+    }
+  }
