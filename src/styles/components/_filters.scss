@@ -69,6 +69,8 @@
     align-items: center;
     gap: 0.75rem;
     color: var(--color-text);
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   &__group[open] > &__summary {
@@ -90,7 +92,64 @@
   &__item {
     padding: 0.75rem 0;
     display: flex;
+    align-items: center;
     gap: 0.5rem;
+  }
+
+  &__checkbox {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.125rem;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0.7rem;
+      height: 0.5rem;
+      background-color: var(--color-primary);
+      mask: url("/src/assets/tick.svg") center / contain no-repeat;
+      transform: scale(0);
+      transition: var(--transition-fast);
+    }
+
+    &:checked {
+      background-color: var(--color-accent);
+
+      &::after {
+        transform: scale(1);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 0.875rem;
+    transition: color var(--transition-fast);
+  }
+
+  &__checkbox:checked + &__label {
+    font-weight: 700;
+  }
+
+  &__item:hover &__checkbox {
+    border-color: var(--color-secondary);
+  }
+
+  &__item:hover &__checkbox:checked {
+    background-color: var(--color-accent);
   }
 
   &__info {
