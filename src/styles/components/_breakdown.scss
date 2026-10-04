@@ -1,6 +1,10 @@
 @use "../base/breakpoints" as bp;
 @use "../base/mixins" as m;
 
+html:has(.breakdown:popover-open) {
+  overflow: hidden;
+}
+
 .breakdown {
   background-color: #fff;
   color: var(--color-text);
@@ -19,6 +23,10 @@
     @supports (position-area: bottom span-right) {
       inset: auto;
       position-area: bottom span-right;
+      position-try-fallbacks:
+        flip-block,
+        flip-inline,
+        flip-block flip-inline;
       margin-top: 0.25rem;
       width: 25rem;
       height: auto;
@@ -125,6 +133,10 @@
   }
 }
 
-html:has(.breakdown:popover-open) {
-  overflow: hidden;
+@include bp.up(desktop) {
+  @supports (position-area: bottom span-right) {
+    html:has(.breakdown:popover-open) {
+      overflow: visible;
+    }
+  }
 }
