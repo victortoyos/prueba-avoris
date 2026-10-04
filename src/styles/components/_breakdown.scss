@@ -1,0 +1,130 @@
+@use "../base/breakpoints" as bp;
+@use "../base/mixins" as m;
+
+.breakdown {
+  background-color: #fff;
+  color: var(--color-text);
+  border-radius: 1.5rem;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  overflow-y: auto;
+
+  @include bp.up(desktop) {
+    @supports (position-area: bottom span-right) {
+      inset: auto;
+      position-area: bottom span-right;
+      margin-top: 0.25rem;
+      width: 25rem;
+      height: auto;
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-base);
+    }
+  }
+
+  &__header {
+    padding: 1rem 1.25rem 1rem 1.375rem;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    line-height: 1.5rem;
+  }
+
+  &__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__location {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    line-height: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__duration {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  &__label {
+    font-weight: 500;
+
+    &--total {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+    }
+  }
+
+  &__value {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.25rem;
+
+    &--total {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__total {
+    padding: 1rem 1.5rem;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0.5rem;
+    padding: 0.5rem;
+    color: var(--color-text);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  &__close-icon {
+    @include m.mask-icon("/src/assets/close.svg", 0.906rem);
+  }
+}
+
+html:has(.breakdown:popover-open) {
+  overflow: hidden;
+}

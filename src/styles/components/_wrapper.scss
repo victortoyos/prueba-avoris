@@ -27,7 +27,7 @@
 .region {
   &__title {
     font-family: var(--font-heading);
-    font-size: 1.375rem;
+    font-size: var(--font-size-xl);
     font-weight: 600;
     line-height: var(--region-title-line);
     margin-bottom: var(--region-title-gap);

@@ -54,7 +54,7 @@
   &__title {
     font-family: var(--font-heading);
     text-align: center;
-    font-size: 1.125rem;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     line-height: 1.5rem;
   }
@@ -162,7 +162,7 @@
   &__label {
     cursor: pointer;
     color: var(--color-text);
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
     transition: color var(--transition-fast);
   }
 
@@ -202,7 +202,7 @@
     border-radius: 0.5rem;
     background-color: #fff;
     filter: drop-shadow(var(--shadow-base));
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
     font-weight: 500;
     line-height: 1rem;
     white-space: nowrap;
