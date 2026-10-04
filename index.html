@@ -86,8 +86,8 @@
                 <legend class="sr-only">Tipo de aventura</legend>
                 <ul class="filters__list" role="list">
                   <li class="filters__item">
-                    <input type="checkbox" id="adv-quads" class="filters__checkbox" />
-                    <label for="adv-quads" class="filters__label">Quads</label>
+                    <input type="checkbox" id="filter-quads" class="filters__checkbox" />
+                    <label for="filter-quads" class="filters__label">Quads</label>
                     <span class="filters__help">
                       <button
                         type="button"
@@ -99,6 +99,62 @@
                       <span id="tip-quads" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
                     </span>
                   </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-paragliding" class="filters__checkbox" checked />
+                    <label for="filter-paragliding" class="filters__label">Parapente</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Parapente"
+                        aria-describedby="tip-paragliding">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-paragliding" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="adv-rafting" class="filters__checkbox" />
+                    <label for="adv-rafting" class="filters__label">Rafting</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Rafting"
+                        aria-describedby="tip-rafting">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-rafting" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="adv-diving" class="filters__checkbox" />
+                    <label for="adv-diving" class="filters__label">Diving</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Diving"
+                        aria-describedby="tip-diving">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-diving" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="adv-snowboarding" class="filters__checkbox" />
+                    <label for="adv-snowboarding" class="filters__label">Snowboard</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Snowboarding"
+                        aria-describedby="tip-snowboarding">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-snowboarding" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
                 </ul>
                 <button type="button" class="filters__more link-button">
                   <span class="link-button__text">Ver 21 más</span>
@@ -107,8 +163,11 @@
             </details>
 
             <details class="filters__group">
-              <summary class="filters__summary">…Alojamiento…</summary>
-              <div class="filters__content">…</div>
+              <summary class="filters__summary">
+                <span class="filters__group-icon filters__group-icon--accommodation" aria-hidden="true"></span>
+                <span class="filters__group-name">Alojamiento</span>
+                <span class="filters__chevron" aria-hidden="true"></span>
+              </summary>
             </details>
 
             <details class="filters__group" open>

@@ -59,6 +59,10 @@
       @include m.mask-icon("/src/assets/aventura.svg", 1.5rem);
     }
 
+    &--accommodation {
+      @include m.mask-icon("/src/assets/alojamiento.svg", 1.5rem);
+    }
+
     &--price {
       @include m.mask-icon("/src/assets/price.svg", 1.5rem);
     }
@@ -73,9 +77,12 @@
     -webkit-user-select: none;
   }
 
+  &__group[open] &__group-name {
+  font-weight: 700;
+}
+
   &__group[open] > &__summary {
     color: var(--color-accent-dark);
-    font-weight: 700;
   }
 
   &__chevron {
@@ -155,9 +162,10 @@
   &__info {
     display: flex;
     align-items: center;
-    &-icon {
-      @include m.mask-icon("/src/assets/info.svg", 1rem);
-    }
+  }
+  
+  &__info-icon {
+    @include m.mask-icon("/src/assets/info.svg", 1rem);
   }
 
   &__help {
@@ -203,5 +211,9 @@
   &__tooltip:hover {
     opacity: 1;
     visibility: visible;
+  }
+
+  &__more {
+    padding: 0.75rem 1rem 0.75rem 1rem;
   }
 }
