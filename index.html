@@ -20,17 +20,17 @@
         <ul class="flex flex-row items-center justify-between gap-x-4 desktop:gap-x-16">
           <li>
             <a href="#" class="nav__link">
-              <span class="nav__icon nav__icon--aventura" aria-hidden="true"></span><span>Aventura</span></a
+              <span class="nav__icon nav__icon--adventure" aria-hidden="true"></span><span>Aventura</span></a
             >
           </li>
           <li>
             <a href="#" class="nav__link">
-              <span class="nav__icon nav__icon--destinos" aria-hidden="true"></span><span>Destinos</span></a
+              <span class="nav__icon nav__icon--destinations" aria-hidden="true"></span><span>Destinos</span></a
             >
           </li>
           <li>
             <a href="#" class="nav__link">
-              <span class="nav__icon nav__icon--alojamiento" aria-hidden="true"></span><span>Alojamiento</span></a
+              <span class="nav__icon nav__icon--accommodation" aria-hidden="true"></span><span>Alojamiento</span></a
             >
           </li>
           <li>
@@ -69,7 +69,7 @@
           <div class="filters__wrapper">
             <details class="filters__group">
               <summary class="filters__summary">
-                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-icon filters__group-icon--destinations" aria-hidden="true"></span>
                 <span class="filters__group-name">Destinos</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
@@ -78,7 +78,7 @@
 
             <details class="filters__group" open>
               <summary class="filters__summary">
-                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-icon filters__group-icon--adventures" aria-hidden="true"></span>
                 <span class="filters__group-name">Aventura</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
@@ -111,7 +111,7 @@
 
             <details class="filters__group" open>
               <summary class="filters__summary">
-                <span class="filters__group-icon" aria-hidden="true"></span>
+                <span class="filters__group-icon filters__group-icon--price" aria-hidden="true"></span>
                 <span class="filters__group-name">Precio</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
@@ -143,8 +143,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
-                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -177,8 +177,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
-                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -211,8 +211,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
-                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -245,8 +245,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
-                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -279,8 +279,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
-                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -300,6 +300,75 @@
                   </div>
                 </article>
               </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes3.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/src/assets/viajes1.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
+                    <p class="card__title">Descubre Bangkok con Iberojet</p>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown">
+                      <span class="card__breakdown-text">Ver desglose</span
+                      ><span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              
             </ul>
           </section>
         </div>

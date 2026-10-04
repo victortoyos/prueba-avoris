@@ -18,15 +18,15 @@
     }
   }
   &__icon {
-    &--aventura {
+    &--adventure {
       @include m.mask-icon("/src/assets/aventura.svg");
     }
 
-    &--destinos {
+    &--destinations {
       @include m.mask-icon("/src/assets/destinos.svg");
     }
 
-    &--alojamiento {
+    &--accommodation {
       @include m.mask-icon("/src/assets/alojamiento.svg");
     }
   }

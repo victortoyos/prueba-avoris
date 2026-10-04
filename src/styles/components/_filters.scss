@@ -50,6 +50,20 @@
     }
   }
 
+  &__group-icon {
+    &--destinations {
+      @include m.mask-icon("/src/assets/destinos.svg", 1.5rem);
+    }
+
+    &--adventures {
+      @include m.mask-icon("/src/assets/aventura.svg", 1.5rem);
+    }
+
+    &--price {
+      @include m.mask-icon("/src/assets/price.svg", 1.5rem);
+    }
+  }
+
   &__summary {
     display: flex;
     align-items: center;
@@ -81,6 +95,7 @@
 
   &__info {
     display: flex;
+    align-items: center;
     &-icon {
       @include m.mask-icon("/src/assets/info.svg", 1rem);
     }
