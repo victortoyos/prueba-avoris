@@ -8,8 +8,9 @@ import "@fontsource/nunito/800.css";
 
 import "./styles/main.scss";
 
-import { initFilters } from "./scripts/filters.ts";
+import { initFilters, initFiltersToggle } from "./scripts/filters.ts";
 
 document.addEventListener("DOMContentLoaded", () => {
   initFilters();
+  initFiltersToggle();
 });

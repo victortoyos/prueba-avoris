@@ -21,3 +21,28 @@ export function initFilters(): void {
     }
   });
 }
+
+export function initFiltersToggle(): void {
+  const moreBtn = document.querySelector<HTMLButtonElement>("[data-filters-more]");
+  const extraItems = document.querySelectorAll<HTMLElement>("[data-extra]");
+  const btnText = moreBtn?.querySelector<HTMLSpanElement>(".link-button__text");
+
+  if (!moreBtn || extraItems.length === 0 || !btnText) return;
+
+  const extraCount = extraItems.length;
+
+  btnText.textContent = `Ver ${extraCount} más`;
+
+  moreBtn.addEventListener("click", () => {
+    const isExpanded = moreBtn.getAttribute("aria-expanded") === "true";
+    const nextState = !isExpanded;
+
+    extraItems.forEach((item) => {
+      item.hidden = !nextState;
+    });
+
+    moreBtn.setAttribute("aria-expanded", String(nextState));
+
+    btnText.textContent = nextState ? "Ver menos" : `Ver ${extraCount} más`;
+  });
+}
