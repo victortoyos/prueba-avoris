@@ -17,17 +17,45 @@
 
 .nav {
   &__link {
-    @apply px-3 flex items-center gap-1.5;
-
-    span {
-      font-weight: 700;
-    }
+    @apply px-3 flex items-center gap-1.5 h-full whitespace-nowrap;
+    position: relative;
+    font-weight: 600;
 
     &:hover {
-      color: var(--color-accent);
+      color: var(--color-primary);
       transition: color var(--transition-fast);
     }
+
+    &[aria-current="page"] {
+      font-weight: 700;
+      cursor: default;
+      pointer-events: none;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--color-accent);
+        transition: background-color 0.2s ease;
+      }
+
+      &::before {
+        inset-inline: 0;
+        bottom: -1px;
+        height: 0.25rem;
+      }
+
+      &::after {
+        bottom: calc(0.25rem - 1px);
+        left: 50%;
+        width: 1.25rem;
+        height: 0.625rem;
+        transform: translateX(-50%);
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      }
+    }
   }
+
   &__icon {
     &--adventure {
       @include m.mask-icon("/src/assets/aventura.svg");
