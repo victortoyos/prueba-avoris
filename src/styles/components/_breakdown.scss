@@ -5,6 +5,14 @@ html:has(.breakdown:popover-open) {
   overflow: hidden;
 }
 
+@include bp.up(desktop) {
+  @supports (position-area: bottom span-right) {
+    html:has(.breakdown:popover-open) {
+      overflow: visible;
+    }
+  }
+}
+
 .breakdown {
   background-color: #fff;
   color: var(--color-text);
@@ -17,6 +25,19 @@ html:has(.breakdown:popover-open) {
   max-width: none;
   max-height: none;
   overflow-y: auto;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    display 0.2s allow-discrete,
+    overlay 0.2s allow-discrete;
+
+  &:popover-open {
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
 
   @include bp.up(desktop) {
     @supports (position-area: bottom span-right) {
@@ -109,7 +130,7 @@ html:has(.breakdown:popover-open) {
   &__total {
     padding: 1rem 1.5rem;
     border-top: 1px solid var(--color-border);
-    
+
     @include bp.up(desktop) {
       background-color: var(--color-surface);
     }
@@ -132,13 +153,5 @@ html:has(.breakdown:popover-open) {
 
   &__close-icon {
     @include m.mask-icon("/src/assets/close.svg", 0.906rem);
-  }
-}
-
-@include bp.up(desktop) {
-  @supports (position-area: bottom span-right) {
-    html:has(.breakdown:popover-open) {
-      overflow: visible;
-    }
   }
 }
