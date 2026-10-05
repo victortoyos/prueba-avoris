@@ -114,7 +114,6 @@ html:has(.nav-dialog:modal) {
       transform: scale(0.95);
     }
   }
-
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(2px);
@@ -122,13 +121,12 @@ html:has(.nav-dialog:modal) {
       opacity var(--transition-fast),
       display var(--transition-fast) allow-discrete,
       overlay var(--transition-fast) allow-discrete;
+  }
+  &[open]::backdrop {
+    opacity: 1;
 
-    &[open]::backdrop {
-      opacity: 1;
-
-      @starting-style {
-        opacity: 0;
-      }
+    @starting-style {
+      opacity: 0;
     }
   }
   &__content {
