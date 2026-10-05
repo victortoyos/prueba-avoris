@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--color-surface);
+
+  &__copyright {
+    background-color: var(--color-border);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+}

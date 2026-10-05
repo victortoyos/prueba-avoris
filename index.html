@@ -48,6 +48,54 @@
       </button>
     </header>
     <main>
+      <section class="hero" aria-roledescription="carousel" aria-label="Destinos destacados">
+        <div class="hero__scroller">
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+            <img class="hero__image" src="/src/assets/hero1.webp" alt="" fetchpriority="high" />
+            <div class="hero__content">
+              <p class="hero__title">Ruta por Tailandia</p>
+              <p class="hero__subtitle">Si te va la aventura, no te lo puedes perder</p>
+              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Australia"
+                >Más información</a
+              >
+            </div>
+          </div>
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+            <img class="hero__image" src="/src/assets/hero2.webp" alt="" loading="lazy" />
+            <div class="hero__content">
+              <p class="hero__title">Ruta por Australia</p>
+              <p class="hero__subtitle">Si te va la paz, no te lo puedes perder</p>
+              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Australia"
+                >Más información</a
+              >
+            </div>
+          </div>
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+            <img class="hero__image" src="/src/assets/hero3.webp" alt="" loading="lazy" />
+            <div class="hero__content">
+              <p class="hero__title">Ruta por Miami</p>
+              <p class="hero__subtitle">Si te va la playa, no te lo puedes perder</p>
+              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Australia"
+                >Más información</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="hero__arrow hero__arrow--prev" aria-label="Imagen anterior">
+          <span class="hero__arrow-icon" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="hero__arrow hero__arrow--next" aria-label="Imagen siguiente">
+          <span class="hero__arrow-icon" aria-hidden="true"></span>
+        </button>
+ 
+        <div class="hero__dots">
+          <button type="button" class="hero__dot" aria-label="Ir a la imagen 1" aria-current="true"></button>
+          <button type="button" class="hero__dot" aria-label="Ir a la imagen 2"></button>
+          <button type="button" class="hero__dot" aria-label="Ir a la imagen 3"></button>
+        </div>
+      </section>
+
       <section class="intro wrapper py-14 desktop:py-[4.5rem]" aria-labelledby="intro-title">
         <h1 id="intro-title" class="intro__title">Vive tus propias aventuras</h1>
         <p class="intro__subtitle">Para los que les gusta explorar y conocer mundo sin complejos</p>
@@ -301,6 +349,14 @@
           </section>
         </div>
       </div>
+      <footer class="footer">
+        <div class="h-32 px-8 tablet:px-6 flex items-center justify-start desktop:justify-center">
+          <img class="h-8 w-auto" src="/src/assets/logo.png" alt="Waveless" />
+        </div>
+        <div class="h-[3.25rem] flex items-center justify-center footer__copyright">
+          <p>@2024 Waveless - Todos los derechos reservados.</p>
+        </div>
+      </footer>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>

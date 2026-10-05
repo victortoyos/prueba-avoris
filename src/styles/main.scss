@@ -3,6 +3,7 @@
 @use './base/breakpoints';
 @use './base/mixins';
 @use './components/header';
+@use './components/hero';
 @use './components/intro';
 @use './components/buttons';
 @use './components/wrapper';
@@ -10,6 +11,7 @@
 @use './components/badge';
 @use './components/filters';
 @use './components/breakdown';
+@use './components/footer';
 
 @tailwind base;
 @tailwind components;

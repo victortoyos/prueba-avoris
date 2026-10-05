@@ -1,0 +1,132 @@
+@use "../base/mixins" as m;
+
+.hero {
+  position: relative;
+
+  &__scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    flex: 0 0 100%;
+    display: grid;
+    place-content: center;
+    min-height: 25rem;
+    text-align: center;
+    color: #fff;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgb(0 0 0 / 0.4);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 1.954rem + 0.19vw, 2.125rem);
+    font-weight: 700;
+    line-height: 1.875rem;
+    padding: 0 5rem 0.75rem;
+  }
+  
+  &__subtitle {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    padding: 0 5rem 3rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateY(-50%);
+    display: grid;
+    place-content: center;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background-color: #cdbccc;
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+
+    &--prev {
+      left: 0;
+
+      .hero__arrow-icon {
+        transform: rotate(90deg);
+      }
+    }
+    &--next {
+      right: 0;
+
+      .hero__arrow-icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__arrow-icon {
+    @include m.mask-icon("/src/assets/chevronDown.svg", 1.5rem);
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &::before {
+      content: "";
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+      background-color: #c6c1bc;
+      border: 1px solid #fff;
+    }
+
+    &[aria-current]::before {
+      background-color: var(--color-accent);
+    }
+  }
+}
