@@ -179,7 +179,39 @@
                 <span class="filters__group-name">Destinos</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
-              <div class="filters__content">…</div>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Tipo de alojamiento</legend>
+                <ul class="filters__list" id="destinations-list">
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-asia" class="filters__checkbox" />
+                    <label for="filter-asia" class="filters__label">Asia</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Asia"
+                        aria-describedby="tip-asia">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-asia" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-europe" class="filters__checkbox" />
+                    <label for="filter-europe" class="filters__label">Europa</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Europa"
+                        aria-describedby="tip-europe">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-europe" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                </ul>
+              </fieldset>
             </details>
 
             <details class="filters__group" open>
@@ -307,6 +339,39 @@
                 <span class="filters__group-name">Alojamiento</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Tipo de alojamiento</legend>
+                <ul class="filters__list" id="accommodation-list">
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-house" class="filters__checkbox" />
+                    <label for="filter-house" class="filters__label">Casas</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Casas"
+                        aria-describedby="tip-house">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-house" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-hotel" class="filters__checkbox" />
+                    <label for="filter-hotel" class="filters__label">Hotel</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Hoteles"
+                        aria-describedby="tip-hotel">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-hotel" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                </ul>
+              </fieldset>
             </details>
 
             <details class="filters__group" open>
@@ -370,6 +435,371 @@
                           class="breakdown__close"
                           aria-label="Cerrar desglose"
                           popovertarget="breakdown-1"
+                          popovertargetaction="hide"
+                          autofocus>
+                          <span class="breakdown__close-icon" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="breakdown__body">
+                        <p class="breakdown__location">
+                          Marruecos, África <span class="breakdown__duration">9 días</span>
+                        </p>
+                        <dl class="breakdown__list">
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Precio antes de impuestos</dt>
+                            <dd class="breakdown__value">1.124,00 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Impuesto</dt>
+                            <dd class="breakdown__value">4,43 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Lorem ipsum</dt>
+                            <dd class="breakdown__value">150,42 €</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <dl class="breakdown__total">
+                        <div class="breakdown__row">
+                          <dt class="breakdown__label breakdown__label--total">Precio final</dt>
+                          <dd class="breakdown__value breakdown__value--total">2.455,00 €</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/prueba-avoris/assets/viajes2-COOzB__b.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-2">
+                      <span class="link-button__text">Ver desglose</span>
+                      <span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <div id="breakdown-2" class="breakdown" popover role="dialog" aria-labelledby="breakdown-2-title">
+                      <div class="breakdown__header">
+                        <h4 id="breakdown-2-title" class="breakdown__title">Desglose de precios</h4>
+                        <button
+                          type="button"
+                          class="breakdown__close"
+                          aria-label="Cerrar desglose"
+                          popovertarget="breakdown-2"
+                          popovertargetaction="hide"
+                          autofocus>
+                          <span class="breakdown__close-icon" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="breakdown__body">
+                        <p class="breakdown__location">
+                          Marruecos, África <span class="breakdown__duration">9 días</span>
+                        </p>
+                        <dl class="breakdown__list">
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Precio antes de impuestos</dt>
+                            <dd class="breakdown__value">1.124,00 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Impuesto</dt>
+                            <dd class="breakdown__value">4,43 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Lorem ipsum</dt>
+                            <dd class="breakdown__value">150,42 €</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <dl class="breakdown__total">
+                        <div class="breakdown__row">
+                          <dt class="breakdown__label breakdown__label--total">Precio final</dt>
+                          <dd class="breakdown__value breakdown__value--total">2.455,00 €</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/prueba-avoris/assets/viajes3-ClyHc3p_.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-3">
+                      <span class="link-button__text">Ver desglose</span>
+                      <span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <div id="breakdown-3" class="breakdown" popover role="dialog" aria-labelledby="breakdown-3-title">
+                      <div class="breakdown__header">
+                        <h4 id="breakdown-3-title" class="breakdown__title">Desglose de precios</h4>
+                        <button
+                          type="button"
+                          class="breakdown__close"
+                          aria-label="Cerrar desglose"
+                          popovertarget="breakdown-3"
+                          popovertargetaction="hide"
+                          autofocus>
+                          <span class="breakdown__close-icon" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="breakdown__body">
+                        <p class="breakdown__location">
+                          Marruecos, África <span class="breakdown__duration">9 días</span>
+                        </p>
+                        <dl class="breakdown__list">
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Precio antes de impuestos</dt>
+                            <dd class="breakdown__value">1.124,00 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Impuesto</dt>
+                            <dd class="breakdown__value">4,43 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Lorem ipsum</dt>
+                            <dd class="breakdown__value">150,42 €</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <dl class="breakdown__total">
+                        <div class="breakdown__row">
+                          <dt class="breakdown__label breakdown__label--total">Precio final</dt>
+                          <dd class="breakdown__value breakdown__value--total">2.455,00 €</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/prueba-avoris/assets/viajes1-C1INPIKD.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-4">
+                      <span class="link-button__text">Ver desglose</span>
+                      <span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <div id="breakdown-4" class="breakdown" popover role="dialog" aria-labelledby="breakdown-4-title">
+                      <div class="breakdown__header">
+                        <h4 id="breakdown-4-title" class="breakdown__title">Desglose de precios</h4>
+                        <button
+                          type="button"
+                          class="breakdown__close"
+                          aria-label="Cerrar desglose"
+                          popovertarget="breakdown-4"
+                          popovertargetaction="hide"
+                          autofocus>
+                          <span class="breakdown__close-icon" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="breakdown__body">
+                        <p class="breakdown__location">
+                          Marruecos, África <span class="breakdown__duration">9 días</span>
+                        </p>
+                        <dl class="breakdown__list">
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Precio antes de impuestos</dt>
+                            <dd class="breakdown__value">1.124,00 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Impuesto</dt>
+                            <dd class="breakdown__value">4,43 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Lorem ipsum</dt>
+                            <dd class="breakdown__value">150,42 €</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <dl class="breakdown__total">
+                        <div class="breakdown__row">
+                          <dt class="breakdown__label breakdown__label--total">Precio final</dt>
+                          <dd class="breakdown__value breakdown__value--total">2.455,00 €</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/prueba-avoris/assets/viajes2-COOzB__b.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-5">
+                      <span class="link-button__text">Ver desglose</span>
+                      <span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <div id="breakdown-5" class="breakdown" popover role="dialog" aria-labelledby="breakdown-5-title">
+                      <div class="breakdown__header">
+                        <h4 id="breakdown-5-title" class="breakdown__title">Desglose de precios</h4>
+                        <button
+                          type="button"
+                          class="breakdown__close"
+                          aria-label="Cerrar desglose"
+                          popovertarget="breakdown-5"
+                          popovertargetaction="hide"
+                          autofocus>
+                          <span class="breakdown__close-icon" aria-hidden="true"></span>
+                        </button>
+                      </div>
+                      <div class="breakdown__body">
+                        <p class="breakdown__location">
+                          Marruecos, África <span class="breakdown__duration">9 días</span>
+                        </p>
+                        <dl class="breakdown__list">
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Precio antes de impuestos</dt>
+                            <dd class="breakdown__value">1.124,00 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Impuesto</dt>
+                            <dd class="breakdown__value">4,43 €</dd>
+                          </div>
+                          <div class="breakdown__row">
+                            <dt class="breakdown__label">Lorem ipsum</dt>
+                            <dd class="breakdown__value">150,42 €</dd>
+                          </div>
+                        </dl>
+                      </div>
+                      <dl class="breakdown__total">
+                        <div class="breakdown__row">
+                          <dt class="breakdown__label breakdown__label--total">Precio final</dt>
+                          <dd class="breakdown__value breakdown__value--total">2.455,00 €</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <button
+                      type="button"
+                      class="button button--secondary button--small card__cta"
+                      aria-label="Reservar: Descubre Bangkok con Iberojet">
+                      Reservar
+                    </button>
+                  </div>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card__media">
+                    <img
+                      class="card__image"
+                      src="/prueba-avoris/assets/viajes3-ClyHc3p_.webp"
+                      width="264"
+                      height="188"
+                      alt=""
+                      loading="lazy" />
+                    <span class="badge card__badge">Quads</span>
+                  </div>
+                  <div class="card__destination">
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
+                  </div>
+                  <div class="card__footer">
+                    <p class="card__price">
+                      <span class="card__from">Desde</span>
+                      <span class="card__amount">248,00 €</span>
+                    </p>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-6">
+                      <span class="link-button__text">Ver desglose</span>
+                      <span class="card__icon" aria-hidden="true"></span>
+                    </button>
+                    <div id="breakdown-6" class="breakdown" popover role="dialog" aria-labelledby="breakdown-6-title">
+                      <div class="breakdown__header">
+                        <h4 id="breakdown-6-title" class="breakdown__title">Desglose de precios</h4>
+                        <button
+                          type="button"
+                          class="breakdown__close"
+                          aria-label="Cerrar desglose"
+                          popovertarget="breakdown-3"
                           popovertargetaction="hide"
                           autofocus>
                           <span class="breakdown__close-icon" aria-hidden="true"></span>
