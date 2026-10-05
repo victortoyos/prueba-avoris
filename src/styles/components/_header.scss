@@ -17,7 +17,6 @@
 }
 
 .nav {
-
   &__list {
     @apply flex h-full flex-row items-center justify-between gap-x-4 desktop:gap-[clamp(1rem,3vw,4rem)];
   }

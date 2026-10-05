@@ -305,8 +305,8 @@ html:has(.filters:modal) {
       color var(--transition-fast);
 
     &:hover {
-      border-color: var(--color-primary-dark);
-      color: var(--color-primary-dark);
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
     }
 
     &:focus-within {
