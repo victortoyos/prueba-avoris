@@ -49,7 +49,7 @@ export function initHeroSlider(): void {
         const activeIndex = slideList.indexOf(entry.target as HTMLElement);
 
         dots.forEach((dot, index) => {
-          dot.toggleAttribute("aria-current", index === activeIndex);
+          dot.toggleAttribute("aria-selected", index === activeIndex);
         });
       }
     });

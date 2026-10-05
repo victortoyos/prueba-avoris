@@ -1,6 +1,7 @@
 @use "../base/mixins" as m;
 
 .header {
+  @apply min-h-14 tablet:min-h-20 px-4 tablet:px-6 desktop:px-8 flex justify-between desktop:grid desktop:grid-cols-[1fr_auto_1fr] items-center;
   border-bottom: 1px solid var(--color-accent);
 
   &__menu-toggle {
@@ -16,6 +17,10 @@
 }
 
 .nav {
+
+  &__list {
+    @apply flex h-full flex-row items-center justify-between gap-x-4 desktop:gap-[clamp(1rem,3vw,4rem)];
+  }
   &__link {
     @apply px-3 flex items-center gap-1.5 h-full whitespace-nowrap;
     position: relative;

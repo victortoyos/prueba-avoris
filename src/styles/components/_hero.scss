@@ -125,7 +125,7 @@
       border: 1px solid #fff;
     }
 
-    &[aria-current]::before {
+    &[aria-selected]::before {
       background-color: var(--color-accent);
     }
   }
