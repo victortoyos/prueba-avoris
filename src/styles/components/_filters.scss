@@ -272,7 +272,7 @@ html:has(.filters:modal) {
   }
 
   &__info:hover + &__tooltip,
-  &__info:focus + &__tooltip,
+  &__info:focus-visible + &__tooltip,
   &__tooltip:hover {
     opacity: 1;
     visibility: visible;
