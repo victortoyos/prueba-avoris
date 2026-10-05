@@ -189,7 +189,39 @@
                 <span class="filters__group-name">Destinos</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
-              <div class="filters__content">…</div>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Tipo de alojamiento</legend>
+                <ul class="filters__list" id="destinations-list">
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-asia" class="filters__checkbox" />
+                    <label for="filter-asia" class="filters__label">Asia</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Asia"
+                        aria-describedby="tip-asia">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-asia" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-europe" class="filters__checkbox" />
+                    <label for="filter-europe" class="filters__label">Europa</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Europa"
+                        aria-describedby="tip-europe">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-europe" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                </ul>
+              </fieldset>
             </details>
 
             <details class="filters__group" open>
@@ -317,6 +349,39 @@
                 <span class="filters__group-name">Alojamiento</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
+              <fieldset class="filters__content">
+                <legend class="sr-only">Tipo de alojamiento</legend>
+                <ul class="filters__list" id="accommodation-list">
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-house" class="filters__checkbox" />
+                    <label for="filter-house" class="filters__label">Casas</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Casas"
+                        aria-describedby="tip-house">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-house" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                  <li class="filters__item">
+                    <input type="checkbox" id="filter-hotel" class="filters__checkbox" />
+                    <label for="filter-hotel" class="filters__label">Hotel</label>
+                    <span class="filters__help">
+                      <button
+                        type="button"
+                        class="filters__info"
+                        aria-label="Más información sobre Hoteles"
+                        aria-describedby="tip-hotel">
+                        <span class="filters__info-icon" aria-hidden="true"></span>
+                      </button>
+                      <span id="tip-hotel" role="tooltip" class="filters__tooltip">Lorem ipsum</span>
+                    </span>
+                  </li>
+                </ul>
+              </fieldset>
             </details>
 
             <details class="filters__group" open>
