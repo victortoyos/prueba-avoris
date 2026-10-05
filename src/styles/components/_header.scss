@@ -1,4 +1,9 @@
 @use "../base/mixins" as m;
+@use "../base/breakpoints" as bp;
+
+html:has(.nav-dialog:modal) {
+  overflow: hidden;
+}
 
 .header {
   @apply min-h-14 tablet:min-h-20 px-4 tablet:px-6 desktop:px-8 flex justify-between desktop:grid desktop:grid-cols-[1fr_auto_1fr] items-center;
@@ -18,7 +23,7 @@
 
 .nav {
   &__list {
-    @apply flex h-full flex-row items-center justify-between gap-x-4 desktop:gap-[clamp(1rem,3vw,4rem)];
+    @apply flex flex-col gap-y-6 desktop:flex-row desktop:h-full desktop:items-center desktop:justify-between desktop:gap-x-4 desktop:gap-[clamp(1rem,3vw,4rem)];
   }
   &__link {
     @apply px-3 flex items-center gap-1.5 h-full whitespace-nowrap;
@@ -34,28 +39,29 @@
       font-weight: 700;
       cursor: default;
       pointer-events: none;
+      @include bp.up(desktop) {
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: var(--color-accent);
+          transition: background-color 0.2s ease;
+        }
 
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        background-color: var(--color-accent);
-        transition: background-color 0.2s ease;
-      }
+        &::before {
+          inset-inline: 0;
+          bottom: -1px;
+          height: 0.25rem;
+        }
 
-      &::before {
-        inset-inline: 0;
-        bottom: -1px;
-        height: 0.25rem;
-      }
-
-      &::after {
-        bottom: calc(0.25rem - 1px);
-        left: 50%;
-        width: 1.25rem;
-        height: 0.625rem;
-        transform: translateX(-50%);
-        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        &::after {
+          bottom: calc(0.25rem - 1px);
+          left: 50%;
+          width: 1.25rem;
+          height: 0.625rem;
+          transform: translateX(-50%);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        }
       }
     }
   }
@@ -71,6 +77,84 @@
 
     &--accommodation {
       @include m.mask-icon("/src/assets/alojamiento.svg");
+    }
+  }
+}
+
+.nav-dialog {
+  &:not([open]) {
+    display: none;
+  }
+
+  &[open] {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 90vw;
+    max-width: 30rem;
+    height: auto;
+    max-height: 90vh;
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--color-primary);
+    border-radius: 1.5rem;
+    background-color: var(--color-surface);
+    z-index: 50;
+    box-shadow: var(--shadow-base);
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      opacity var(--transition-fast),
+      transform var(--transition-fast),
+      display var(--transition-fast) allow-discrete,
+      overlay var(--transition-fast) allow-discrete;
+
+    @starting-style {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    transition:
+      opacity var(--transition-fast),
+      display var(--transition-fast) allow-discrete,
+      overlay var(--transition-fast) allow-discrete;
+
+    &[open]::backdrop {
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  @include bp.up(desktop) {
+    display: contents !important;
+
+    &__content {
+      display: contents;
+      padding: 0;
+    }
+
+    .nav {
+      align-self: stretch;
     }
   }
 }

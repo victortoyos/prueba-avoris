@@ -28,39 +28,55 @@
       <a href="#" aria-label="Waveless, ir a inicio"
         ><img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless"
       /></a>
-      <nav class="nav hidden desktop:block self-stretch">
-        <ul class="nav__list">
-          <li class="flex h-full">
-            <a href="#" class="nav__link" aria-current="page">
-              <span class="nav__icon nav__icon--adventure" aria-hidden="true"></span>
-              <span class="nav__title">Aventura</span>
-            </a>
-          </li>
-          <li class="flex h-full">
-            <a href="#" class="nav__link">
-              <span class="nav__icon nav__icon--destinations" aria-hidden="true"></span>
-              <span class="nav__title">Destinos</span>
-            </a>
-          </li>
-          <li class="flex h-full">
-            <a href="#" class="nav__link">
-              <span class="nav__icon nav__icon--accommodation" aria-hidden="true"></span>
-              <span class="nav__title">Alojamiento</span>
-            </a>
-          </li>
-          <li class="flex h-full">
-            <a href="#" class="nav__link">
-              <span class="nav__title">Sobre nosotros</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+
+      <dialog class="nav-dialog desktop:contents" id="menu" data-nav-dialog>
+        <div class="nav-dialog__content">
+          <div class="nav-dialog__header desktop:hidden">
+            <img class="h-6 w-auto" src="/src/assets/logo.png" alt="Waveless" />
+            <button type="button" class="nav-dialog__close" aria-label="Cerrar menú" data-nav-close>
+              <span class="filters__close-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="flex h-full">
+                <a href="#" class="nav__link" aria-current="page">
+                  <span class="nav__icon nav__icon--adventure" aria-hidden="true"></span>
+                  <span class="nav__title">Aventura</span>
+                </a>
+              </li>
+              <li class="flex h-full">
+                <a href="#" class="nav__link">
+                  <span class="nav__icon nav__icon--destinations" aria-hidden="true"></span>
+                  <span class="nav__title">Destinos</span>
+                </a>
+              </li>
+              <li class="flex h-full">
+                <a href="#" class="nav__link">
+                  <span class="nav__icon nav__icon--accommodation" aria-hidden="true"></span>
+                  <span class="nav__title">Alojamiento</span>
+                </a>
+              </li>
+              <li class="flex h-full">
+                <a href="#" class="nav__link">
+                  <span class="nav__title">Sobre nosotros</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="button header__cta w-full desktop:hidden mt-6">Reserva</button>
+        </div>
+      </dialog>
+
       <button class="button header__cta ml-auto hidden desktop:inline-flex">Reserva</button>
       <button
         class="header__menu-toggle desktop:hidden"
         aria-label="Abrir menú"
         aria-expanded="false"
-        aria-controls="menu">
+        aria-controls="menu"
+        aria-haspopup="dialog"
+        data-nav-open>
         <span class="header__menu-icon"></span>
       </button>
     </header>
