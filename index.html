@@ -8,16 +8,28 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://victortoyos.github.io/prueba-avoris/" />
+    <meta property="og:title" content="Waveless | Víctor Toyos" />
+    <meta
+      property="og:description"
+      content="Descubre destinos únicos, alojamientos e itinerarios de aventura con Waveless." />
+    <meta property="og:image" content="https://victortoyos.github.io/prueba-avoris/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Waveless | Víctor Toyos" />
+    <meta
+      name="twitter:description"
+      content="Descubre destinos únicos, alojamientos e itinerarios de aventura con Waveless." />
+    <meta name="twitter:image" content="https://victortoyos.github.io/og-image.jpg" />
   </head>
 
   <body>
-    <header
-      class="header min-h-14 tablet:min-h-20 px-4 tablet:px-6 desktop:px-8 flex justify-between desktop:grid desktop:grid-cols-[1fr_auto_1fr] items-center">
+    <header class="header">
       <a href="#" aria-label="Waveless, ir a inicio"
         ><img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless"
       /></a>
       <nav class="hidden desktop:block self-stretch">
-        <ul class="flex h-full flex-row items-center justify-between gap-x-4 desktop:gap-[clamp(1rem,3vw,4rem)]">
+        <ul class="nav__list">
           <li class="flex h-full">
             <a href="#" class="nav__link" aria-current="page">
               <span class="nav__icon nav__icon--adventure" aria-hidden="true"></span>
@@ -60,12 +72,12 @@
             <div class="hero__content">
               <p class="hero__title">Ruta por Tailandia</p>
               <p class="hero__subtitle">Si te va la aventura, no te lo puedes perder</p>
-              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Australia"
+              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Tailandia"
                 >Más información</a
               >
             </div>
           </div>
-          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
             <img class="hero__image" src="/src/assets/hero2.webp" alt="" loading="lazy" />
             <div class="hero__content">
               <p class="hero__title">Ruta por Australia</p>
@@ -75,14 +87,12 @@
               >
             </div>
           </div>
-          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 de 3">
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
             <img class="hero__image" src="/src/assets/hero3.webp" alt="" loading="lazy" />
             <div class="hero__content">
               <p class="hero__title">Ruta por Miami</p>
               <p class="hero__subtitle">Si te va la playa, no te lo puedes perder</p>
-              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Australia"
-                >Más información</a
-              >
+              <a href="#" class="button button--accent" aria-label="Más información: Ruta por Miami">Más información</a>
             </div>
           </div>
         </div>
@@ -95,7 +105,7 @@
         </button>
 
         <div class="hero__dots">
-          <button type="button" class="hero__dot" aria-label="Ir a la imagen 1" aria-current="true"></button>
+          <button type="button" class="hero__dot" aria-label="Ir a la imagen 1" aria-selected="true"></button>
           <button type="button" class="hero__dot" aria-label="Ir a la imagen 2"></button>
           <button type="button" class="hero__dot" aria-label="Ir a la imagen 3"></button>
         </div>
@@ -144,7 +154,7 @@
               </summary>
               <fieldset class="filters__content">
                 <legend class="sr-only">Tipo de aventura</legend>
-                <ul class="filters__list" id="adventure-list" role="list">
+                <ul class="filters__list" id="adventure-list">
                   <li class="filters__item">
                     <input type="checkbox" id="filter-quads" class="filters__checkbox" />
                     <label for="filter-quads" class="filters__label">Quads</label>
@@ -304,8 +314,8 @@
                     <span class="badge card__badge">Quads</span>
                   </div>
                   <div class="card__destination">
-                    <h3 class="card__location">Marruecos, África <span class="card__duration">9 días</span></h3>
-                    <p class="card__title">Descubre Bangkok con Iberojet</p>
+                    <p class="card__location">Marruecos, África <span class="card__duration">9 días</span></p>
+                    <h3 class="card__title">Descubre Bangkok con Iberojet</h3>
                   </div>
                   <div class="card__footer">
                     <p class="card__price">
@@ -318,7 +328,7 @@
                     </button>
                     <div id="breakdown-1" class="breakdown" popover role="dialog" aria-labelledby="breakdown-1-title">
                       <div class="breakdown__header">
-                        <h4 id="breakdown-1-title" class="breakdown__title">Desglose del precios</h4>
+                        <h4 id="breakdown-1-title" class="breakdown__title">Desglose de precios</h4>
                         <button
                           type="button"
                           class="breakdown__close"
@@ -368,15 +378,15 @@
           </section>
         </div>
       </div>
-      <footer class="footer">
-        <div class="h-32 px-8 tablet:px-6 flex items-center justify-start desktop:justify-center">
-          <img class="h-8 w-auto" src="/src/assets/logo.png" alt="Waveless" />
-        </div>
-        <div class="h-[3.25rem] flex items-center justify-center footer__copyright">
-          <p>@2024 Waveless - Todos los derechos reservados.</p>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="h-32 px-8 tablet:px-6 flex items-center justify-start desktop:justify-center">
+        <img class="h-8 w-auto" src="/src/assets/logo.png" alt="Waveless" />
+      </div>
+      <div class="h-[3.25rem] flex items-center justify-center footer__copyright">
+        <p>@2024 Waveless - Todos los derechos reservados.</p>
+      </div>
+    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
