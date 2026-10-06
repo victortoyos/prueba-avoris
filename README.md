@@ -6,7 +6,7 @@ Maquetación de la home de un site ficticio de viajes a partir de un diseño en 
 
 ## Requisitos
 
-- Node.js: el repositorio incluye `.nvmrc` («v26.10.0») y `engines` pide `>=20.0.0`. 
+- Node.js: el repositorio incluye `.nvmrc` (v26.10.0) y `engines` pide `>=20.0.0`. 
 - npm 10 o superior.
 
 ## Instalación y arranque
@@ -46,21 +46,21 @@ npm run dev
 
 ## Maquetación: Flex y Grid
 
-Se han utilizado ambos métodos combinados dependiendo de la situación: por ejemplo en las cards de resultados, teniendo además un panel de filtros, siendo bidimensional, he optado por un grid donde todo encaja de forma más limpia.
-Donde no ha sido necesario por tener que alinear solo en un eje, se ha usado flex. 
-En ciertos lugares de los componentes como el desglose, que variaba de desktop a mobile en cuanto a disposición, también se usa grid ya que es más sencillo para mover elementos de posición respecto a flex.
+- Se han utilizado ambos métodos combinados dependiendo de la situación: por ejemplo en las cards de resultados, teniendo además un panel de filtros, siendo bidimensional, he optado por un grid donde todo encaja de forma más limpia.
+- Donde no ha sido necesario por tener que alinear solo en un eje, se ha usado flex. 
+- En ciertos lugares de los componentes como el pie de la card, que variaba de desktop a mobile en cuanto a disposición, también se usa grid ya que es más sencillo para mover elementos de posición respecto a flex.
 
 ## Componentes destacados
 
 ### Menú mobile
 
-- Aunque en el figma no había un menú mobile, he deciddo añadirlo como un "plus" utilizando para ello un `dialog` que en escritorio se queda fijo, no teniendo que duplicarlo, y añadiendo animación de entrada y salida. Si está la modal abierta y se pasa a una resolución superior, se cierra automáticamente.
+- Aunque en el figma no había un menú mobile, he decidido añadirlo como un "plus" utilizando para ello un `dialog` que en escritorio se queda fijo, no teniendo que duplicarlo, y añadiendo animación de entrada y salida. Si está la modal abierta y se pasa a una resolución superior, se cierra automáticamente.
 
 ### Filtros
 
 - Se han usado componentes nativos como `details` y `summary` ya que dan todo lo que necesitábamos sin necesidad de añadir lógica.
 - Los tooltips se han realizado con css para poder estilarlos de acorde al figma.
-- En tablet y mobile, al igual que el menú mobile, se convieerte en un `dialog`, así podemos además cerrar con Esc y mantener el foco sin necesidad de javascript adicional. 
+- En tablet y mobile, al igual que el menú mobile, se convierte en un `dialog`, así podemos además cerrar con Esc y mantener el foco sin necesidad de javascript adicional. 
 - Los filtros carecen de funcionalidad ya que no lo consideré imprescindible para una prueba de maquetación, aunque con una lógica entendible detrás basada en `[datas]` se podría realizar fácilmente.
 - Si se pasa de tablet a desktop, la modal se cierra automáticamente.
 
@@ -75,7 +75,7 @@ En ciertos lugares de los componentes como el desglose, que variaba de desktop a
 - Se usa `srcset` para primar el tamaño de la carga de las imágenes a lo que sea necesario, además de aplicar `loading="lazy"`a las imágenes del hero excepto un `fetchpriority="high"`a la primera.
 - No se ha usado una librería por no añadir kb al proyecto, aunque `swiper` sería mi primera opción. 
 - Se añade un overlay con opacidad para garantizar la lectura del texto blanco. 
-- Como limitación, no es posible que el slider funcione como buble infinito. 
+- Como limitación, no está implementado que el slider funcione como bucle infinito. 
 
 ### Transiciones y movimiento
 
