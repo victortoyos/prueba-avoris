@@ -217,7 +217,7 @@ html:has(.filters:modal) {
   }
 
   &__item:hover &__checkbox {
-    border-color: var(--color-secondary);
+    border-color: var(--color-primary-dark);
   }
 
   &__item:hover &__checkbox:checked {
@@ -272,7 +272,7 @@ html:has(.filters:modal) {
   }
 
   &__info:hover + &__tooltip,
-  &__info:focus-visible + &__tooltip,
+  &__info:focus + &__tooltip,
   &__tooltip:hover {
     opacity: 1;
     visibility: visible;
@@ -305,8 +305,8 @@ html:has(.filters:modal) {
       color var(--transition-fast);
 
     &:hover {
-      border-color: var(--color-secondary);
-      color: var(--color-secondary);
+      border-color: var(--color-primary-dark);
+      color: var(--color-primary-dark);
     }
 
     &:focus-within {

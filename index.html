@@ -65,12 +65,13 @@
               </li>
             </ul>
           </nav>
-          <button class="button header__cta w-full desktop:hidden mt-6">Reserva</button>
+          <button type="button" class="button header__cta w-full desktop:hidden mt-6">Reserva</button>
         </div>
       </dialog>
 
-      <button class="button header__cta ml-auto hidden desktop:inline-flex">Reserva</button>
+      <button type="button" class="button header__cta ml-auto hidden desktop:inline-flex">Reserva</button>
       <button
+        type="button"
         class="header__menu-toggle desktop:hidden"
         aria-label="Abrir menú"
         aria-expanded="false"
@@ -190,7 +191,7 @@
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
               <fieldset class="filters__content">
-                <legend class="sr-only">Tipo de alojamiento</legend>
+                <legend class="sr-only">Tipo de destino</legend>
                 <ul class="filters__list" id="destinations-list">
                   <li class="filters__item">
                     <input type="checkbox" id="filter-asia" class="filters__checkbox" />
@@ -277,7 +278,7 @@
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" id="filter-diving" class="filters__checkbox" />
-                    <label for="filter-diving" class="filters__label">Diving</label>
+                    <label for="filter-diving" class="filters__label">Buceo</label>
                     <span class="filters__help">
                       <button
                         type="button"
@@ -291,7 +292,7 @@
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" id="filter-snowboarding" class="filters__checkbox" />
-                    <label for="filter-snowboarding" class="filters__label">Snowboard</label>
+                    <label for="filter-snowboarding" class="filters__label">Snowboarding</label>
                     <span class="filters__help">
                       <button
                         type="button"
@@ -368,7 +369,7 @@
                   </li>
                   <li class="filters__item">
                     <input type="checkbox" id="filter-hotel" class="filters__checkbox" />
-                    <label for="filter-hotel" class="filters__label">Hotel</label>
+                    <label for="filter-hotel" class="filters__label">Hoteles</label>
                     <span class="filters__help">
                       <button
                         type="button"
@@ -433,7 +434,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-1">
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-1" aria-label="Desglose: Descubre Bangkok con Iberojet"></button>
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -506,7 +507,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-2">
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-2" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -579,7 +580,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-3">
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-3" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -652,7 +653,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-4">
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-4" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -725,7 +726,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-5">
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-5" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -802,14 +803,14 @@
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
-                    <div id="breakdown-6" class="breakdown" popover role="dialog" aria-labelledby="breakdown-6-title">
+                    <div id="breakdown-6" class="breakdown" popover role="dialog" aria-labelledby="breakdown-6-title" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <div class="breakdown__header">
                         <h4 id="breakdown-6-title" class="breakdown__title">Desglose de precios</h4>
                         <button
                           type="button"
                           class="breakdown__close"
                           aria-label="Cerrar desglose"
-                          popovertarget="breakdown-3"
+                          popovertarget="breakdown-6"
                           popovertargetaction="hide"
                           autofocus>
                           <span class="breakdown__close-icon" aria-hidden="true"></span>

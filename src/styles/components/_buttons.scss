@@ -5,7 +5,7 @@
   --button-bg: var(--color-primary);
   --button-text: #fff;
   --button-border: var(--color-primary);
-  --button-bg-hover: var(--color-secondary);
+  --button-bg-hover: var(--color-primary-dark);
   --button-text-hover: #fff;
   --button-border-hover: var(--color-primary);
   --button-border-width: 1px;
@@ -31,7 +31,7 @@
   &--secondary {
     --button-bg: #fff;
     --button-text: var(--color-primary);
-    --button-bg-hover: var(--color-secondary);
+    --button-bg-hover: var(--color-primary-dark);
     --button-text-hover: #fff;
     --button-border: var(--color-primary);
   }
@@ -102,7 +102,7 @@
   transition: color var(--transition-fast);
 
   &:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary-dark);
   }
   &:focus-visible {
     outline: 2px solid var(--color-primary);
