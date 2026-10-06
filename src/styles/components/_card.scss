@@ -1,4 +1,5 @@
 @use "../base/breakpoints" as bp;
+@use "../base/mixins" as m;
 
 .card {
   --card-radius: 1.5rem;
@@ -105,14 +106,7 @@
   }
 
   &__icon {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-color: currentColor;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    mask-image: url("/src/assets/chevronDown.svg");
+    @include m.mask-icon("/src/assets/chevronDown.svg", 1rem);
   }
 
   &__cta {

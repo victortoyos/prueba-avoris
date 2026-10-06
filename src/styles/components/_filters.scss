@@ -103,16 +103,11 @@ html:has(.filters:modal) {
   }
 
   &__group {
-    cursor: pointer;
 
     &-name {
       font-weight: 600;
       line-height: 1.25rem;
     }
-  }
-
-  &__summary {
-    padding: 0.75rem 0;
   }
 
   &__group-icon {
@@ -137,16 +132,18 @@ html:has(.filters:modal) {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    padding: 0.75rem 0;
     color: var(--color-text);
     user-select: none;
     -webkit-user-select: none;
+    cursor: pointer;
   }
 
-  &__group[open] &__group-name {
+  &__group:modal &__group-name {
     font-weight: 700;
   }
 
-  &__group[open] > &__summary {
+  &__group:modal > &__summary {
     color: var(--color-accent-dark);
   }
 
@@ -157,7 +154,7 @@ html:has(.filters:modal) {
     transition: transform 0.2s ease;
   }
 
-  &__group[open] &__chevron {
+  &__group:modal &__chevron {
     transform: none;
   }
 
@@ -282,7 +279,7 @@ html:has(.filters:modal) {
     padding: 0.75rem 1rem 0.75rem 1rem;
   }
 
-  &__content-price {
+  &__content--price {
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -328,6 +325,7 @@ html:has(.filters:modal) {
     background: transparent;
     color: var(--color-text);
     outline: none;
+    appearance: textfield;
 
     &::placeholder {
       color: #635a63;
