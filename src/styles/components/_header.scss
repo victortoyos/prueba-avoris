@@ -1,5 +1,6 @@
-@use "../base/mixins" as m;
 @use "../base/breakpoints" as bp;
+@use "../base/mixins" as m;
+@use "../base/icons";
 
 html:has(.nav-dialog:modal) {
   overflow: hidden;
@@ -15,7 +16,7 @@ html:has(.nav-dialog:modal) {
     }
   }
   &__menu-icon {
-    @include m.mask-icon("/src/assets/burgerMenu.svg");
+    @extend %icon-burger;
     transition: background-color var(--transition-fast);
   }
 }
@@ -64,15 +65,15 @@ html:has(.nav-dialog:modal) {
 
   &__icon {
     &--adventure {
-      @include m.mask-icon("/src/assets/aventura.svg");
+      @extend %icon-adventure;
     }
 
     &--destinations {
-      @include m.mask-icon("/src/assets/destinos.svg");
+      @extend %icon-destinations;
     }
 
     &--accommodation {
-      @include m.mask-icon("/src/assets/alojamiento.svg");
+      @extend %icon-accommodation;
     }
   }
 }

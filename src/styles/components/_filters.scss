@@ -1,5 +1,6 @@
 @use "../base/breakpoints" as bp;
 @use "../base/mixins" as m;
+@use "../base/icons";
 
 html:has(.filters:modal) {
   overflow: hidden;
@@ -112,19 +113,19 @@ html:has(.filters:modal) {
 
   &__group-icon {
     &--destinations {
-      @include m.mask-icon("/src/assets/destinos.svg", 1.5rem);
+      @extend %icon-adventure;
     }
 
     &--adventures {
-      @include m.mask-icon("/src/assets/aventura.svg", 1.5rem);
+      @extend %icon-destinations;
     }
 
     &--accommodation {
-      @include m.mask-icon("/src/assets/alojamiento.svg", 1.5rem);
+      @extend %icon-accommodation;
     }
 
     &--price {
-      @include m.mask-icon("/src/assets/price.svg", 1.5rem);
+      @extend %icon-price;
     }
   }
 
@@ -139,22 +140,22 @@ html:has(.filters:modal) {
     cursor: pointer;
   }
 
-  &__group:modal &__group-name {
+  &__group[open] &__group-name {
     font-weight: 700;
   }
 
-  &__group:modal > &__summary {
+  &__group[open] > &__summary {
     color: var(--color-accent-dark);
   }
 
   &__chevron {
-    @include m.mask-icon("/src/assets/chevronDown.svg");
+    @extend %icon-chevron;
     margin-left: auto;
     transform: rotate(-90deg);
     transition: transform 0.2s ease;
   }
 
-  &__group:modal &__chevron {
+  &__group[open] &__chevron {
     transform: none;
   }
 

@@ -1,0 +1,25 @@
+@use "mixins" as m;
+
+%icon-adventure {
+  @include m.mask-icon("/src/assets/aventura.svg");
+}
+
+%icon-destinations {
+  @include m.mask-icon("/src/assets/destinos.svg");
+}
+
+%icon-accommodation {
+  @include m.mask-icon("/src/assets/alojamiento.svg");
+}
+
+%icon-burger {
+  @include m.mask-icon("/src/assets/burgerMenu.svg");
+}
+
+%icon-price {
+  @include m.mask-icon("/src/assets/price.svg");
+}
+
+%icon-chevron {
+  @include m.mask-icon("/src/assets/chevronDown.svg");
+}
