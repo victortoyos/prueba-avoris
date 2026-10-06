@@ -12,11 +12,14 @@ export function initMobileMenu(): void {
 
   const closeMenu = () => {
     dialog.close();
-    openBtn.setAttribute("aria-expanded", "false");
   };
 
   openBtn.addEventListener("click", openMenu);
   closeBtn.addEventListener("click", closeMenu);
+
+  dialog.addEventListener("close", () => {
+    openBtn.setAttribute("aria-expanded", "false");
+  });
 
   dialog.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
