@@ -78,10 +78,6 @@ html:has(.nav-dialog:modal) {
 }
 
 .nav-dialog {
-  &:not([open]) {
-    display: none;
-  }
-
   &[open] {
     display: block;
     position: fixed;
@@ -140,7 +136,7 @@ html:has(.nav-dialog:modal) {
   }
 
   @include bp.up(desktop) {
-    display: contents !important;
+    display: contents;
 
     &__content {
       display: contents;
