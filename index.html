@@ -33,7 +33,7 @@
         <div class="nav-dialog__content">
           <div class="nav-dialog__header desktop:hidden">
             <img class="h-6 w-auto" src="/src/assets/logo.png" alt="Waveless" />
-            <button type="button" class="nav-dialog__close" aria-label="Cerrar menú" data-nav-close>
+            <button type="button" aria-label="Cerrar menú" data-nav-close>
               <span class="filters__close-icon" aria-hidden="true"></span>
             </button>
           </div>
@@ -42,34 +42,34 @@
             <ul class="nav__list">
               <li class="flex h-full">
                 <a href="#" class="nav__link" aria-current="page">
-                  <span class="nav__icon nav__icon--adventure" aria-hidden="true"></span>
-                  <span class="nav__title">Aventura</span>
+                  <span class="nav__icon--adventure" aria-hidden="true"></span>
+                  <span>Aventura</span>
                 </a>
               </li>
               <li class="flex h-full">
                 <a href="#" class="nav__link">
-                  <span class="nav__icon nav__icon--destinations" aria-hidden="true"></span>
-                  <span class="nav__title">Destinos</span>
+                  <span class="nav__icon--destinations" aria-hidden="true"></span>
+                  <span>Destinos</span>
                 </a>
               </li>
               <li class="flex h-full">
                 <a href="#" class="nav__link">
-                  <span class="nav__icon nav__icon--accommodation" aria-hidden="true"></span>
-                  <span class="nav__title">Alojamiento</span>
+                  <span class="nav__icon--accommodation" aria-hidden="true"></span>
+                  <span>Alojamiento</span>
                 </a>
               </li>
               <li class="flex h-full">
                 <a href="#" class="nav__link">
-                  <span class="nav__title">Sobre nosotros</span>
+                  <span>Sobre nosotros</span>
                 </a>
               </li>
             </ul>
           </nav>
-          <button type="button" class="button header__cta w-full desktop:hidden mt-6">Reserva</button>
+          <button type="button" class="button w-full desktop:hidden mt-6">Reserva</button>
         </div>
       </dialog>
 
-      <button type="button" class="button header__cta ml-auto hidden desktop:inline-flex">Reserva</button>
+      <button type="button" class="button ml-auto hidden desktop:inline-flex">Reserva</button>
       <button
         type="button"
         class="header__menu-toggle desktop:hidden"
@@ -175,7 +175,7 @@
       </div>
       <div
         class="destinations wrapper desktop:grid desktop:grid-cols-[16.5rem_1fr] desktop:gap-6 pb-14 desktop:pb-[4.5rem]">
-        <dialog class="filters destinations__filters" aria-labelledby="filters-title" data-filters-dialog>
+        <dialog class="filters" aria-labelledby="filters-title" data-filters-dialog>
           <div class="filters__header">
             <h2 id="filters-title" class="filters__title">Filtrar mi búsqueda</h2>
             <button type="button" class="filters__close desktop:hidden" aria-label="Cerrar filtros" data-filters-close>
@@ -190,9 +190,9 @@
                 <span class="filters__group-name">Destinos</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
-              <fieldset class="filters__content">
+              <fieldset>
                 <legend class="sr-only">Tipo de destino</legend>
-                <ul class="filters__list" id="destinations-list">
+                <ul id="destinations-list">
                   <li class="filters__item">
                     <input type="checkbox" id="filter-asia" class="filters__checkbox" />
                     <label for="filter-asia" class="filters__label">Asia</label>
@@ -231,9 +231,9 @@
                 <span class="filters__group-name">Aventura</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
-              <fieldset class="filters__content">
+              <fieldset>
                 <legend class="sr-only">Tipo de aventura</legend>
-                <ul class="filters__list" id="adventure-list">
+                <ul id="adventure-list">
                   <li class="filters__item">
                     <input type="checkbox" id="filter-quads" class="filters__checkbox" />
                     <label for="filter-quads" class="filters__label">Quads</label>
@@ -350,9 +350,9 @@
                 <span class="filters__group-name">Alojamiento</span>
                 <span class="filters__chevron" aria-hidden="true"></span>
               </summary>
-              <fieldset class="filters__content">
+              <fieldset>
                 <legend class="sr-only">Tipo de alojamiento</legend>
-                <ul class="filters__list" id="accommodation-list">
+                <ul id="accommodation-list">
                   <li class="filters__item">
                     <input type="checkbox" id="filter-house" class="filters__checkbox" />
                     <label for="filter-house" class="filters__label">Casas</label>
@@ -409,7 +409,7 @@
           </div>
         </dialog>
 
-        <div class="destinations__results">
+        <div>
           <section class="region" aria-labelledby="asia-title">
             <h2 id="asia-title" class="region__title">Asia</h2>
             <ul class="region__list" role="list">
@@ -434,7 +434,7 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-1" aria-label="Desglose: Descubre Bangkok con Iberojet"></button>
+                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-1" aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
