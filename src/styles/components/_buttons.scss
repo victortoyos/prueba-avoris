@@ -3,10 +3,10 @@
 
 .button {
   --button-bg: var(--color-primary);
-  --button-text: #fff;
+  --button-text: var(--color-white);
   --button-border: var(--color-primary);
   --button-bg-hover: var(--color-primary-dark);
-  --button-text-hover: #fff;
+  --button-text-hover: var(--color-white);
   --button-border-hover: var(--color-primary);
   --button-border-width: 1px;
   --button-padding-y: 0.75rem;
@@ -35,7 +35,7 @@
   }
 
   &--secondary {
-    --button-bg: #fff;
+    --button-bg: var(--color-white);
     --button-text: var(--color-primary);
     --button-bg-hover: var(--color-secondary);
     --button-text-hover: -var(--color-primary-dark);
@@ -44,10 +44,10 @@
 
   &--accent {
     --button-bg: var(--color-accent);
-    --button-text: #4e250e;
+    --button-text: var(--color-primary-dark);
     --button-border: var(--color-accent);
     --button-bg-hover: var(--color-accent-dark);
-    --button-text-hover: #fff;
+    --button-text-hover: var(--color-white);
     --button-border-hover: var(--color-accent-dark);
     padding: 1rem 3rem;
     font-size: 1.25rem;

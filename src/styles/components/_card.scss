@@ -4,7 +4,7 @@
 .card {
   --card-radius: 1.5rem;
 
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: var(--card-radius);
   box-shadow: var(--shadow-base);
   display: flex;

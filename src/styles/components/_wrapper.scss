@@ -1,17 +1,17 @@
 @use "../base/breakpoints" as bp;
 
 .wrapper {
-  --margin-wrapper: 15px;
+  --margin-wrapper: 0.9375rem;
 
   width: min(1128px, 100% - 2 * var(--margin-wrapper));
   margin-inline: auto;
 
   @include bp.up(tablet) {
-    --margin-wrapper: 71px;
+    --margin-wrapper: 4.4375rem;
   }
 
   @include bp.up(desktop) {
-    --margin-wrapper: 48px;
+    --margin-wrapper: 3rem;
   }
 }
 
