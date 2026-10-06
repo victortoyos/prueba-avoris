@@ -9,7 +9,7 @@
   --button-text-hover: var(--color-white);
   --button-border-hover: var(--color-primary);
   --button-border-width: 1px;
-  --button-padding-y: 0.75rem;
+  --button-padding-y: var(--space-3);
   --button-padding-x: 2.5rem;
 
   display: inline-flex;
@@ -49,19 +49,19 @@
     --button-bg-hover: var(--color-accent-dark);
     --button-text-hover: var(--color-white);
     --button-border-hover: var(--color-accent-dark);
-    padding: 1rem 3rem;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    padding: var(--space-4) 3rem;
+    font-size: var(--font-size-lg);
+    line-height: var(--space-6);
 
     @include bp.up(tablet) {
-      padding: 0.75rem 3rem;
-      font-size: 1rem;
+      padding: var(--space-3) 3rem;
+      font-size: var(--font-size-base);
     }
   }
 
   &--small {
     --button-padding-y: 0.5rem;
-    --button-padding-x: 1.375rem;
+    --button-padding-x: var(--space-5-5);
   }
 
   &--show-filters {

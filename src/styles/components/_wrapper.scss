@@ -35,6 +35,6 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(16.5rem, 100%), 1fr));
-    gap: 1.5rem;
+    gap: var(--space-6);
   }
 }

@@ -31,7 +31,7 @@
   }
 
   &__destination {
-    padding: 1rem;
+    padding: var(--space-4);
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
@@ -53,7 +53,7 @@
   &__title {
     font-size: var(--font-size-lg);
     font-weight: 700;
-    line-height: 1.375rem;
+    line-height: var(--space-5-5);
   }
 
   &__from {
@@ -65,7 +65,7 @@
   &__amount {
     display: block;
     font-size: var(--font-size-xl);
-    line-height: 1.5rem;
+    line-height: var(--space-6);
     font-weight: 700;
     white-space: nowrap;
   }
@@ -77,9 +77,9 @@
       "breakdown price"
       "cta cta";
     align-items: end;
-    gap: 1rem 0.5rem;
+    gap: var(--space-4) 0.5rem;
     margin-top: auto;
-    padding: 1rem;
+    padding: var(--space-4);
     background-color: var(--color-surface);
     border-radius: 0 0 var(--card-radius) var(--card-radius);
 

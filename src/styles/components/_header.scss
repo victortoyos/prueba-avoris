@@ -112,7 +112,7 @@ html:has(.nav-dialog:modal) {
   &__content {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: var(--space-6);
     height: 100%;
   }
 
@@ -120,7 +120,7 @@ html:has(.nav-dialog:modal) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-8);
   }
 
   @include bp.up(desktop) {
