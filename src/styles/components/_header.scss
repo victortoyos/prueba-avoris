@@ -6,7 +6,6 @@ html:has(.nav-dialog:modal) {
 }
 
 .header {
-  @apply min-h-14 tablet:min-h-20 px-4 tablet:px-6 desktop:px-8 flex justify-between desktop:grid desktop:grid-cols-[1fr_auto_1fr] items-center;
   border-bottom: 1px solid var(--color-accent);
 
   &__menu-toggle {
@@ -22,9 +21,6 @@ html:has(.nav-dialog:modal) {
 }
 
 .nav {
-  &__list {
-    @apply flex flex-col gap-y-6 desktop:flex-row desktop:h-full desktop:items-center desktop:justify-between desktop:gap-[clamp(1rem,3vw,4rem)];
-  }
   &__link {
     @apply px-3 flex items-center gap-1.5 h-full whitespace-nowrap;
     position: relative;

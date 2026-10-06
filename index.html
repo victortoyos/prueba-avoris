@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header min-h-14 tablet:min-h-20 px-4 tablet:px-6 desktop:px-8 flex justify-between desktop:grid desktop:grid-cols-[1fr_auto_1fr] items-center">
       <a href="#" aria-label="Waveless, ir a inicio"
         ><img class="h-6 w-auto desktop:h-8" src="/src/assets/logo.png" alt="Waveless"
       /></a>
@@ -39,7 +39,8 @@
           </div>
 
           <nav class="nav">
-            <ul class="nav__list">
+            <ul
+              class="flex flex-col gap-y-6 desktop:flex-row desktop:h-full desktop:items-center desktop:justify-between desktop:gap-[clamp(1rem,3vw,4rem)]">
               <li class="flex h-full">
                 <a href="#" class="nav__link" aria-current="page">
                   <span class="nav__icon--adventure" aria-hidden="true"></span>
@@ -434,7 +435,11 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-1" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <button
+                      type="button"
+                      class="card__breakdown link-button"
+                      popovertarget="breakdown-1"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -507,7 +512,11 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-2" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <button
+                      type="button"
+                      class="card__breakdown link-button"
+                      popovertarget="breakdown-2"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -580,7 +589,11 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-3" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <button
+                      type="button"
+                      class="card__breakdown link-button"
+                      popovertarget="breakdown-3"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -653,7 +666,11 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-4" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <button
+                      type="button"
+                      class="card__breakdown link-button"
+                      popovertarget="breakdown-4"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -726,7 +743,11 @@
                       <span class="card__from">Desde</span>
                       <span class="card__amount">248,00 €</span>
                     </p>
-                    <button type="button" class="card__breakdown link-button" popovertarget="breakdown-5" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <button
+                      type="button"
+                      class="card__breakdown link-button"
+                      popovertarget="breakdown-5"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
@@ -803,7 +824,13 @@
                       <span class="link-button__text">Ver desglose</span>
                       <span class="card__icon" aria-hidden="true"></span>
                     </button>
-                    <div id="breakdown-6" class="breakdown" popover role="dialog" aria-labelledby="breakdown-6-title" aria-label="Desglose: Descubre Bangkok con Iberojet">
+                    <div
+                      id="breakdown-6"
+                      class="breakdown"
+                      popover
+                      role="dialog"
+                      aria-labelledby="breakdown-6-title"
+                      aria-label="Desglose: Descubre Bangkok con Iberojet">
                       <div class="breakdown__header">
                         <h4 id="breakdown-6-title" class="breakdown__title">Desglose de precios</h4>
                         <button
